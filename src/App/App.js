@@ -17,14 +17,21 @@ const useStyles = makeStyles({
   leftContainer:{
     backgroundColor: "F4F4F4",
     width: "40%",
-    paddingLeft: "16px"
+    paddingLeft: "16px",
+    paddingRight: "16px",
   },
   mainContainer:{
     display: "flex",
     padding: "0px 0px 0px 260px",
     width: "100%",
     height: "100vh",
-    paddingTop: "64px"
+    paddingTop: "64px",
+    position: "fixed"
+  },
+  imagePlaceholder: {
+    minWidth: "100%",
+    minHeight: "40%",
+    backgroundColor: "white"
   }
 })
 
@@ -42,6 +49,9 @@ function App() {
     <div className = {classes.mainContainer}>
       <div className = {classes.leftContainer}> 
         <h1>Playlist</h1>
+        <div className={classes.imagePlaceholder}>
+          
+        </div>
       </div>
     
     <div className={classes.rightContainer}>
