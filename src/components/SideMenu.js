@@ -12,7 +12,8 @@ const style= ( {
         top: '64px',
         width: '260px',
         height: '100%',
-        backgroundColor: '#F4F4F4'
+        backgroundColor: '#F4F4F4',
+        position: "fixed"
     }
 })
 

@@ -8,17 +8,23 @@ import DraggableList from '../components/DraggableList';
 import { useState, setState, state, initialState } from 'react';
 
 const useStyles = makeStyles({
-  appRight:{
-    paddingLeft: '260px',
-    width: '75%',
+  rightContainer:{
+    width: '60%',
+    overflowY: "scroll",
+    height: "100vh"
+
   },
-  appLeft:{
-    backgroundColor: "black",
-    display: "block",
+  leftContainer:{
+    backgroundColor: "F4F4F4",
+    width: "40%",
+    paddingLeft: "16px"
   },
-  appMain:{
+  mainContainer:{
     display: "flex",
-    padding: "0px",
+    padding: "0px 0px 0px 260px",
+    width: "100%",
+    height: "100vh",
+    paddingTop: "64px"
   }
 })
 
@@ -31,17 +37,18 @@ function App() {
   return (
     //this is a react fragment <>Your Content Goes Here!</> 
     <>
+    <Header></Header> 
     <SideMenu />
-    <Header></Header>
-    <div className = {classes.appMain}>
-      <div className={classes.appRight}>
+    <div className = {classes.mainContainer}>
+      <div className = {classes.leftContainer}> 
+        <h1>Playlist</h1>
+      </div>
+    
+    <div className={classes.rightContainer}>
           <ChipsArray></ChipsArray>
           <DraggableList></DraggableList>
       </div>
-
-      <div className = {classes.appLeft}> 
-      </div>
-
+   
     </div>
 
     <CssBaseline />

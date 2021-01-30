@@ -15,7 +15,8 @@ import {v4} from "uuid";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    backgroundColor: theme.palette.background.paper
+    backgroundColor: theme.palette.background.paper,
+    padding: '60px 0 16px 0',
   },
   draggableListItem: {
       padding: '16px',
@@ -24,9 +25,9 @@ const useStyles = makeStyles((theme) => ({
       alignItems: "center",
       backgroundColor: "white",
       borderRadius: "2.5px",
+      
   },
   content: {
-
   }
 }));
 
@@ -50,6 +51,44 @@ const item = {
     description: "Donec ex velit, posuere in ipsum ac, lobortis rutrum urna. Proin risus dui, vehicula ut eros at, pellentesque luctus massa. Morbi mattis aliquet placerat"
   }
 
+  const item4 = {
+    id: v4(),
+    name: "Lorem ipsum dolor sit amet",
+    description: "Donec ex velit, posuere in ipsum ac, lobortis rutrum urna. Proin risus dui, vehicula ut eros at, pellentesque luctus massa. Morbi mattis aliquet placerat"
+  }
+
+  const item5 = {
+    id: v4(),
+    name: "Lorem ipsum dolor sit amet",
+    description: "Donec ex velit, posuere in ipsum ac, lobortis rutrum urna. Proin risus dui, vehicula ut eros at, pellentesque luctus massa. Morbi mattis aliquet placerat"
+  }
+  const item6 = {
+    id: v4(),
+    name: "Lorem ipsum dolor sit amet",
+    description: "Donec ex velit, posuere in ipsum ac, lobortis rutrum urna. Proin risus dui, vehicula ut eros at, pellentesque luctus massa. Morbi mattis aliquet placerat"
+  }
+  const item7 = {
+    id: v4(),
+    name: "Lorem ipsum dolor sit amet",
+    description: "Donec ex velit, posuere in ipsum ac, lobortis rutrum urna. Proin risus dui, vehicula ut eros at, pellentesque luctus massa. Morbi mattis aliquet placerat"
+  }
+
+  const item8 = {
+    id: v4(),
+    name: "Lorem ipsum dolor sit amet",
+    description: "Donec ex velit, posuere in ipsum ac, lobortis rutrum urna. Proin risus dui, vehicula ut eros at, pellentesque luctus massa. Morbi mattis aliquet placerat"
+  }
+
+  const item9 = {
+    id: v4(),
+    name: "Lorem ipsum dolor sit amet",
+    description: "Donec ex velit, posuere in ipsum ac, lobortis rutrum urna. Proin risus dui, vehicula ut eros at, pellentesque luctus massa. Morbi mattis aliquet placerat"
+  }
+  const item10 = {
+    id: v4(),
+    name: "Lorem ipsum dolor sit amet",
+    description: "Donec ex velit, posuere in ipsum ac, lobortis rutrum urna. Proin risus dui, vehicula ut eros at, pellentesque luctus massa. Morbi mattis aliquet placerat"
+  }
 //Note: You can have multiple DroppabaleContainer just add that as a new object
 
 
@@ -58,7 +97,7 @@ export default function DraggableList() {
     const [state, setState] = useState({
         "DroppableContainer": {
           title: "DroppableContainer",
-          items: [item, item2, item3]
+          items: [item, item2, item3, item4, item5, item6, item7, item8, item9, item10]
         }
       })
 
@@ -99,7 +138,7 @@ export default function DraggableList() {
 
 
   return (
-    <div >
+    <div>
         <DragDropContext onDragEnd={handleDragEnd}>
             {_.map(state, (data, key) => {
                 //data is the data in DraggableContainer

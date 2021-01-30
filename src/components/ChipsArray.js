@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "none",
     padding: theme.spacing(0.5),
     margin: 0,
+    position: "fixed"
   },
   chip: {
     margin: theme.spacing(0.5),
@@ -29,11 +30,11 @@ export default function ChipsArray() {
   }
   const [chipData, setChipData] = React.useState([
       //This is a dynamic data. Write how to fetch suggestions based on time of the day, user's behavior and recently viewed items
-    { key: 0, label: 'Suggestion A' },
-    { key: 1, label: 'Suggestion B' },
-    { key: 2, label: 'Suggestion C' },
-    { key: 3, label: 'Suggestion D' },
-    { key: 4, label: 'Suggestion E' },
+    { key: 0, label: 'Lorem' },
+    { key: 1, label: 'Ipsum' },
+    { key: 2, label: 'Dolor' },
+    { key: 3, label: 'Sit' },
+    { key: 4, label: 'Amet' },
   ]);
 
   const handleDelete = (chipToDelete) => () => {

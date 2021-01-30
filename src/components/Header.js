@@ -10,7 +10,8 @@ import SearchIcon from '@material-ui/icons/Search'
 const useStyles = makeStyles ({
     root: {
         backgroundColor: '#F4F4F4',
-        boxShadow: "none"
+        boxShadow: "none",
+        position: "fixed"
 
     }, 
     searchInput: {
