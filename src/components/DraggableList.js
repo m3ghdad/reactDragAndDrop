@@ -11,12 +11,11 @@ import _ from "lodash";
 import {v4} from "uuid";
 
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     backgroundColor: theme.palette.background.paper,
-    padding: '60px 0 16px 0',
+    padding: '60px 0 60px 0',
   },
   draggableListItem: {
       padding: '16px',
@@ -25,7 +24,9 @@ const useStyles = makeStyles((theme) => ({
       alignItems: "center",
       backgroundColor: "white",
       borderRadius: "2.5px",
-      
+      '&:hover':{
+        backgroundColor: "#F8F8F8",
+    },      
   },
   content: {
   }
@@ -94,12 +95,31 @@ const item = {
 
 export default function DraggableList() {
 
+  // function changeBackgroundHover(e) {
+  //   e.target.style.background = "#F8F8F8"
+    
+  // }
+
+  // function changeBackgroundLeave(e) {
+  //   e.target.style.background = "white"
+    
+  // }
+
+
+
+
     const [state, setState] = useState({
         "DroppableContainer": {
           title: "DroppableContainer",
           items: [item, item2, item3, item4, item5, item6, item7, item8, item9, item10]
         }
       })
+    
+      
+      const [hover, setHover] = useState(false);
+      
+
+
 
   const handleDragEnd = ({destination, source}) => {
     console.log("from", source)
@@ -166,18 +186,24 @@ export default function DraggableList() {
                                                 //Change classNames with withStyles
                                                 //change span with dragIcon
                                                   ref={provided.innerRef}
-                                                  {...provided.draggableProps}
+                                                  {...provided.draggableProps}                                                                                               
                                                 >
                                                
                                                   {/* <span   {...provided.dragHandleProps}> Drag by ME </span> */}
-                                                  <ListItemText primary={el.name} secondary={el.description} />
+                                                  <ListItemText
+                                                   primary={el.name} secondary={el.description}
+                                                  > 
+                                                  
+                                                  </ListItemText>
                                                   {/* {el.name}
                                                   {el.description} */}
                                                      <span 
-                                                  {...provided.dragHandleProps}
-                                                  > 
-                                                    <DragIndicatorIcon >
-                                                      </DragIndicatorIcon> 
+                                                     {...provided.dragHandleProps}
+                                                  >   
+                                                  <DragIndicatorIcon></DragIndicatorIcon>
+
+                                                                                                 
+                                                
                                                     </span>
                                                 </div>
                                               )

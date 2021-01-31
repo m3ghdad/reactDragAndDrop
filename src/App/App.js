@@ -31,7 +31,8 @@ const useStyles = makeStyles({
   imagePlaceholder: {
     minWidth: "100%",
     minHeight: "40%",
-    backgroundColor: "white"
+    backgroundColor: "white",
+    borderRadius: "2.5px"
   }
 })
 
