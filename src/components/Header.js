@@ -4,15 +4,13 @@ import MenuIcon from '@material-ui/icons/Menu'
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import PersonIcon from '@material-ui/icons/Person';
-import SearchIcon from '@material-ui/icons/Search'
+import SearchIcon from '@material-ui/icons/Search';
 
 
 const useStyles = makeStyles ({
     root: {
         backgroundColor: '#F4F4F4',
-        boxShadow: "none",
-        position: "fixed"
-
+        boxShadow: "none"
     }, 
     searchInput: {
         opacity: '0.6',
@@ -40,8 +38,8 @@ export default function Header() {
             <Toolbar>
                 <Grid container alignItems="center">
                     <Grid item >
-                        <IconButton>
-                            <MenuIcon color="primary" fontSize="small">
+                        <IconButton >
+                            <MenuIcon fontSize="small">
                             </MenuIcon>
                         </IconButton>
                         

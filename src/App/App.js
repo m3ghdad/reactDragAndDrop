@@ -4,8 +4,9 @@ import SideMenu from '../components/SideMenu';
 import { makeStyles, CssBaseline} from '@material-ui/core';
 import Header from '../components/Header';
 import ChipsArray from '../components/ChipsArray';
-import DraggableList from '../components/DraggableList';
+import DraggableList from '../components/DroppableList';
 import { useState, setState, state, initialState } from 'react';
+import HoverIconButton from '../components/HoverIconButton';
 
 const useStyles = makeStyles({
   rightContainer:{
@@ -25,12 +26,11 @@ const useStyles = makeStyles({
     padding: "0px 0px 0px 260px",
     width: "100%",
     height: "100vh",
-    paddingTop: "64px",
     position: "fixed"
   },
   imagePlaceholder: {
     minWidth: "100%",
-    minHeight: "40%",
+    minHeight: "30%",
     backgroundColor: "white",
     borderRadius: "2.5px"
   }
@@ -51,8 +51,9 @@ function App() {
       <div className = {classes.leftContainer}> 
         <h1>Playlist</h1>
         <div className={classes.imagePlaceholder}>
-          
+        
         </div>
+        <HoverIconButton></HoverIconButton>
       </div>
     
     <div className={classes.rightContainer}>
